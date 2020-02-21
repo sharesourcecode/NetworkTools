@@ -21,12 +21,12 @@ else
 	touch $FILE
 fi
 while true; do
-echo -e "\n" >>$FILE
-echo 'https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' >>$FILE
-curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - >>$FILE
-date +%H:%M:%S_%d/%m/%Y >>$FILE
-echo -e "\n" >>$FILE
-cat $FILE | grep ':' | tail -n4
-sleep 30m
+	echo -e "\n" >>$FILE
+	echo 'https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' >>$FILE
+	curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - >>$FILE
+	date +%H:%M:%S_%d/%m/%Y >>$FILE
+	echo -e "\n" >>$FILE
+	cat $FILE | grep ':' | tail -n4
+	sleep 30m
 done
 exit
