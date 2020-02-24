@@ -15,7 +15,7 @@ if [[ -e $FILE && -n $FILE ]]; then
 	case $OP in
 		(y|Y) clear; >$FILE; echo 'Starting...' ;;
 		(n|N) clear; echo 'Starting...' ;;
-		(*) echo -e "nInvalid optionn"; exit 0 ;;
+		(*) echo -e "\nInvalid option\n"; exit 0 ;;
 	esac
 else
 	touch $FILE
