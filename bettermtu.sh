@@ -4,7 +4,7 @@ num=1493
 until [[ -n $RCVD && $RCVD -eq 10 || $num -lt 576 ]]; do
 	num=$[$num-1]
 	echo -e "Checking $num bytes..."
-	PING=$(ping -s $num -c10 google.com)
+	PING=$(ping -s $num -c10 www.speedtest.net)
 	RCVD=$(echo $PING | grep -o '10 received' | tr -cd "[[:digit:]]")
 	clear
 done
