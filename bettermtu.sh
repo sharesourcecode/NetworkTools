@@ -1,7 +1,6 @@
 #!/bin/bash
 echo 'Long tests will be done, be patient.'
 num=1493
-RCVDD=""
 until [[ -n $RCVD && $RCVD -eq 10 || $num -lt 576 ]]; do
 	num=$[$num-1]
 	echo -e "Checking $num bytes..."
